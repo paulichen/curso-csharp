@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Globalization;
 using System.Collections.Generic;
+using Classes.Entities;
+using Classes.Entities.Enums;
 
 namespace Classes {
     class Program {
@@ -12,9 +14,25 @@ namespace Classes {
             //ExecutaContaBancaria();
             //ExecutaNullables();
             //ExecutaLista();
-            ExecutaMatriz();
-            Console.WriteLine("atualização teste");
+            //ExecutaMatriz();
+            ExecutaEnum();
+            
 
+        }
+
+        private static void ExecutaEnum() {
+            Order order = new Order {
+                Id = 1080,
+                Moment = DateTime.Now,
+                Status = OrderStatus.PendingPayment
+            };
+
+            Console.WriteLine(order);
+
+            string txt = OrderStatus.PendingPayment.ToString();
+            OrderStatus os = Enum.Parse<OrderStatus>("Delivered");
+
+            Console.WriteLine(os);
         }
 
         private static void ExecutaMatriz() {
