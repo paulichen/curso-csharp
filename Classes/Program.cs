@@ -13,6 +13,7 @@ namespace Classes {
             //ExecutaNullables();
             //ExecutaLista();
             ExecutaMatriz();
+            Console.WriteLine("atualização teste");
 
         }
 
